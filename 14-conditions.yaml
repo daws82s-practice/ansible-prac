@@ -1,10 +1,8 @@
 - name: Conditions
   hosts: local
   connection: local
-  vars_prompt:
-  - name: my_number
-    prompt: "Please enter the number"
-    private: false
+  vars:
+    my_number: 15
     
   tasks:
   - name: Print the number 
