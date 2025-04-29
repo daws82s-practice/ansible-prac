@@ -1,8 +1,11 @@
 - name: Conditions
   hosts: local
   connection: local
-  vars:
-    my_number: 15
+  vars_prompt:
+  - name: my_number
+    prompt: "Please enter the number"
+    private: false
+    
   tasks:
   - name: Print the number 
     ansible.builtin.debug:
