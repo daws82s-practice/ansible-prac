@@ -1,0 +1,14 @@
+- name: install multiple packages
+  hosts:  web
+  become: yes
+  tasks:
+  - name: installing multiple applications
+    ansible.builtin.package:
+      name: "{{ item }}"
+      state: installed
+    loop:
+    - git
+    - mysql
+    - gcc
+    - terraform
+    - jenkins
