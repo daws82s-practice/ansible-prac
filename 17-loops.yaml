@@ -1,0 +1,11 @@
+- name: lists
+  hosts:  local
+  connection: local
+  tasks:
+  - name: print the list
+    ansible.builtin.debug:
+      msg: "{{ item }}"
+    list:
+    - bhanu
+    - srinu
+    - praveen
