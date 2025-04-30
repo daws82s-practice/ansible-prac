@@ -10,5 +10,4 @@
     - git
     - mysql
     - gcc
-    - terraform
-    - jenkins
+    - zip
